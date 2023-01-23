@@ -18,6 +18,7 @@ jobs:
         uses: JetBrains/qodana-action@v2022.3.0
         with:
           args: --baseline,.qodana/baseline.sarif.json
+          pr-mode: false
       - run: sudo df -h
       - uses: github/codeql-action/upload-sarif@v2
         with:
